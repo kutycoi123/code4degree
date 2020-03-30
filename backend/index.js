@@ -18,7 +18,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors")
 /* Setup database */
-mongoDBUrl = "mongodb://localhost/code4degree";
+mongoDBUrl = process.env.MONGODB_CONNECT_URL || "mongodb://localhost/code4degree";
 mongoose.connect(mongoDBUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
