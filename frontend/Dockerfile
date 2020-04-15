@@ -2,7 +2,7 @@ FROM node:12.16
 
 WORKDIR /app
 
-ENV REACT_APP_BASE_URL="http://35.203.116.199/"
+ENV REACT_APP_BASE_URL="http://35.184.196.1/"
 
 COPY package*.json ./
 RUN npm install --silent
