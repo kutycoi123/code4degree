@@ -56,11 +56,4 @@ app.use('/api/user', user);
 
 app.use('/api/courses', authMiddleware, courses);
 
-// Delete this, router transferred in Course router
-// app.use('/api/course/:courseId/problems', (req, res, next) => {
-//   res.locals.userId = req.params.userId;
-//   res.locals.courseId = req.params.courseId;
-//   next();
-// }, problems);
-
 app.listen(port, () => console.log(`${env} server listening on port ${port}!`));

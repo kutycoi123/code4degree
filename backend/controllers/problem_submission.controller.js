@@ -197,7 +197,7 @@ module.exports = {
                     }
                     let test = problemSub.testcase_results.find(e => judge.testcase_id == e.testcase_id);
                     if(test){
-                        test.stdout = Buffer.from(judge.stdout, 'base64').toString('ascii');
+			test.stdout = judge.stdout;
                         if(judge.status.id == statusId.ACCEPTED){
                             acceptedSub++;
                             test.result = true;
